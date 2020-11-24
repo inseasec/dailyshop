@@ -52,5 +52,6 @@
     $('#product_table').DataTable();
 } );
  </script>
+ 
 </body>
 </html>

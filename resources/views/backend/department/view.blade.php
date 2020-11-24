@@ -23,7 +23,7 @@
         <div class="col-md-12">
 <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">View Department h</h3>
+              <h3 class="box-title">View Department</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

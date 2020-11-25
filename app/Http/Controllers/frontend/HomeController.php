@@ -16,7 +16,7 @@ class HomeController extends Controller
   
     /*$user = User::all();*/
 
-     /* all department */
+     /* all department data featchinng*/
         $department = Department::all()->toArray();
       /*  echo '<pre>' . print_r($categories,1) . '</pre>';exit;*/
         

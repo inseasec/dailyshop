@@ -17,7 +17,7 @@ use App\Models\Product;
 class ProductController extends BaseController
 {
    public function create() {
-    
+      // test comment
         $DepObj = new Department();
         $depsArr = $DepObj->getdep();
 

@@ -18,7 +18,8 @@ class HomeController extends Controller
 {
      public function __construct(){
   
-    /*$user = User::all();*/
+    /*$user = User::all();*  test change to test git sync/
+         
 
      /* all department data featchinng*/
         $department = Department::all()->toArray();

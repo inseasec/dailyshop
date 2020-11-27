@@ -8,7 +8,11 @@ use App\Models\Categorie;
 use App\Models\Cart;
 use App\Models\Department;
 use App\Models\Product;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Session;
+/*use Yajra\Datatables\Facades\Datatables;*/
+
+use DataTables;
 
 class HomeController extends Controller
 {
@@ -234,13 +238,28 @@ class HomeController extends Controller
        }
       
     }
+
+  public function dataTablePage() {
+
+    return view('welcome');
+
+  }
+
+  public function getStudents(Request $request){
+
+    if ($request->ajax()) {
+
+            $data = Customer::latest()->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
+
+                    $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="{{url(home)}}" class="delete btn btn-danger btn-sm">Delete</a>';
+                    return $actionBtn;
+                    
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+  }
 }
-/*<li>
-<a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
-<div class="aa-cartbox-info">
-<h4><a href="#">Product Name</a></h4>
-<p>1 x $250</p>
-</div>
-<a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-</li>
-*/

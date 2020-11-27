@@ -41,17 +41,7 @@
 <script src="{{ url('dist/js/demo.js') }}"></script>
 <script src="{{ url('dist/js/view.js') }}"></script>
 <script src="{{ url('js/myjs.js') }}"></script>
-<script>
-  $(document).ready(function() {
-    $('#department_table').DataTable();
-	} );
-   $(document).ready(function() {
-    $('#category_table').DataTable();
-} );
-    $(document).ready(function() {
-    $('#product_table').DataTable();
-} );
- </script>
+<!--  -->
  
 </body>
 </html>

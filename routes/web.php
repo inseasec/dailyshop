@@ -18,8 +18,10 @@ Auth::routes();
 Route::get('home',function(){
 	return redirect('admin');
 });
+
+//data
 Route::get('data-table','frontend\HomeController@dataTablePage');
-Route::any('students/list','frontend\HomeController@getStudents')->name('students.list');
+/*Route::any('students/list','frontend\HomeController@getStudents')->name('students.list');*/
 
 Route::any('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('login', '\App\Http\Controllers\Auth\LoginController@showLoginForm')->name('login');

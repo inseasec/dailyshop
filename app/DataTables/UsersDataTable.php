@@ -47,7 +47,6 @@ class UsersDataTable extends DataTable
                     ->minifiedAjax()
                     ->orderBy(1)
                     ->parameters([
-                        
                         'dom'          => 'Bfrtip',
                         'buttons'      => ['excel', 'csv'],
                     ]);

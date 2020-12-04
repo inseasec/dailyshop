@@ -3,6 +3,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\DataTables\UsersDataTable;
 
 use App\Models\Categorie;
 use App\Models\Cart;
@@ -12,7 +13,7 @@ use App\Models\Customer;
 use Illuminate\Support\Facades\Session;
 /*use Yajra\Datatables\Facades\Datatables;*/
 
-use DataTables;
+/*use DataTables;*/
 
 class HomeController extends Controller
 {
@@ -240,17 +241,17 @@ class HomeController extends Controller
       
     }
 
-  public function dataTablePage() {
+  public function dataTablePage(UsersDataTable $dataTable) {
 
-    return view('welcome');
+   return $dataTable->render('welcome');
 
   }
 
-  public function getStudents(Request $request){
+  /*public function getStudents(Request $request){
 
     if ($request->ajax()) {
 
-            $data = Customer::latest()->get();
+            $data = Department::latest()->get();
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
@@ -262,5 +263,7 @@ class HomeController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-  }
+  }*/
+
+
 }

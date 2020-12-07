@@ -18,7 +18,7 @@
 <body>
       
 <div class="container">
-    <h1>Laravel Yajra Datatables Export Buttons</h1>
+    <h1></h1>
   
     {!! $dataTable->table() !!}
 </div>

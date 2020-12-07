@@ -48,7 +48,7 @@ class UsersDataTable extends DataTable
                     ->orderBy(1)
                     ->parameters([
                         'dom'          => 'Bfrtip',
-                        'buttons'      => ['excel', 'csv'],
+                        'buttons'      => ['excel', 'csv','export'],
                     ]);
     }
   

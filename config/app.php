@@ -167,6 +167,9 @@ return [
         Yajra\DataTables\ButtonsServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
 
+        //another package for pdf button
+        Barryvdh\DomPDF\ServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -234,6 +237,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'PDF2' => Barryvdh\DomPDF\Facade::class,
 
 
     ],

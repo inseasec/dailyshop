@@ -17,8 +17,10 @@
 </head>
 <body>
       
-<div class="container">
-    <h1></h1>
+<div class="container-fluid mt-10">
+     <div class="d-flex justify-content-end mb-4 ">
+           <a class="btn btn-primary" href="{{ URL::to('/employee/pdf') }}">Export to PDF</a>
+        </div>
   
     {!! $dataTable->table() !!}
 </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\DataTables\UsersDataTable;
-
+use PDF2;
 use App\Models\Categorie;
 use App\Models\Cart;
 use App\Models\Department;
@@ -247,6 +247,12 @@ class HomeController extends Controller
 
   }
 
+  public function storageExamplePage() {
+
+   return view('storage-examples');
+
+  }
+
   /*public function getStudents(Request $request){
 
     if ($request->ajax()) {
@@ -265,5 +271,16 @@ class HomeController extends Controller
         }
   }*/
 
+/*public function createPDF() {
+      // retreive all records from db
+      $data = Product::all();
+
+      // share data to view
+      view()->share('new',$data);
+      $pdf = PDF2::loadView('new', $data);
+
+      // download PDF file with download method
+      return $pdf->download('pdf_file.pdf');
+    }*/
 
 }

@@ -19,8 +19,11 @@ Route::get('home',function(){
 	return redirect('admin');
 });
 
-//data
+Route::get('storage-example','frontend\HomeController@storageExamplePage');
+
+// Yajra data tables 
 Route::get('data-table','frontend\HomeController@dataTablePage');
+Route::get('/employee/pdf','frontend\HomeController@createPDF');
 /*Route::any('students/list','frontend\HomeController@getStudents')->name('students.list');*/
 
 Route::any('logout', '\App\Http\Controllers\Auth\LoginController@logout');
